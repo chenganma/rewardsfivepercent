@@ -1,0 +1,21 @@
+{
+  "short_name": "Rewards",
+  "name": "Rewards",
+  "icons": [
+    {
+      "src": "icons/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icons/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#000",
+  "display": "fullscreen",
+  "scope": "/",
+  "theme_color": "#2196F3"
+}

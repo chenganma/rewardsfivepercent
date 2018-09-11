@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" amp>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#536878" />
+    <title>Rewards</title>
+    <!-- The AMP runtime must be loaded as the second child of the `<head>` tag.-->
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    <!--
+      AMP HTML files require a canonical link pointing to the regular HTML. If no HTML version exists, it should point to itself.
+    -->
+    <link rel="canonical" href="https://chenganma.com/ampweb/index.html">
+
+    <!--
+      AMP HTML files require a viewport declaration. It's recommended to include initial-scale=1.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
+
+    <!--
+      The AMP boilerplate.
+    -->
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+
+    <style amp-custom>
+      /* any custom styles go here. */
+
+      .boxes {
+        /*border: 5px solid black;*/
+        border: 3px outset plum;
+        padding: 3%;
+        margin: 6%;
+      }
+
+      body {
+        "background_color": "#000";
+        "theme_color": "#536878";
+      }
+
+    </style>
+
+    <!-- manifest function -->
+    <link rel="manifest" href="manifest.json">
+    
+</head>
+
+<body>
+
+    <amp-install-serviceworker
+      src="serviceworker.js" layout="nodisplay">
+    </amp-install-serviceworker>
+
+    <center><h1>Credit Card Calendar</h1></center>
+    <center><h3>July - September 2018</h3></center>
+
+    <center></center>
+
+    <div class="boxes">
+    <center>
+      <amp-img src="images/chase.jpg" width="500" height="316" layout="responsive" alt="Freedom"></amp-img>
+    </center>
+
+            <center>
+            <h4>5% Gas Station</h4>
+
+            <h4>5% Lyft</h4>
+    
+            <h4>5% Walgreens</h4>
+            </center>
+    </div>
+
+    <center></center>
+    <div class="boxes">
+    <center>
+      <amp-img  src="images/discover.jpg" width="500px" height="316px" layout="responsive" alt="Discover"></amp-img>
+    </center>
+
+            <center>
+            <h4>5% Restaurant</h4>
+            </center>
+    </div>
+
+    <center></center>
+    <div class="boxes">
+    <center>
+      <amp-img src="images/amex-prefer.jpg" width="500" height="316" layout="responsive" alt="AMEX Cash Prefer"></amp-img>
+    </center>
+    <!-- </section> -->
+
+            <center>
+            <h4>6% Supermarkets</h4>
+            <h4>3% Gas Station</h4>
+            <h4>3% Department Store</h4>
+            <h4>1% All Other Purchase</h4>
+            </center>
+    </div>
+
+    <center></center>
+    <div class="boxes">
+    <center>
+      <amp-img src="images/aarp.jpg" width="500px" height="316px" layout="responsive" alt="AARP"></amp-img>
+    </center>
+    <!-- </section> -->
+
+            <center>
+            <h4>3% Restaurant</h4>
+            <h4>3% Gas Station</h4>
+            <h4>1% All Other Purchase</h4>
+            </center>
+    </div>
+
+    <center></center>
+    <div class="boxes">
+    <center>
+      <amp-img src="images/amex-ascend.jpg" width="500px" height="316px" layout="responsive" alt="AARP"></amp-img>
+    </center>
+    <!-- </section> -->
+
+            <center>
+            <h4>12x Hilton Portfolio Hotel</h4>
+            <h4>6x Restaurants</h4>
+            <h4>6x Supermarket</h4>
+            <h4>6x Gas Station</h4>
+            <h4>3x All Other Purchase</h4>
+            </center>
+    </div>
+         
+
+    <center>
+    <footer class="ampstart-footer flex flex-column items-center p3 center">© 2018 Copyright</footer>
+    </center>
+
+    
+
+</body>
+<script>
+  if ('serviceWorker' in navigator) {
+    console.log("Will the service worker register?");
+    navigator.serviceWorker.register('serviceworker.js')
+      .then(function(reg){
+        console.log("Yes, it did.");
+      }).catch(function(err) {
+        console.log("No it didn't. This happened: ", err)
+      });
+  }
+</script>
+</html>
