@@ -1,16 +1,26 @@
 <!doctype html>
-<html lang="en" amp>
+<html amp>
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="theme-color" content="#536878" />
+    <meta name="Description" content="Track down five percent cashback rewards calendar. Discover and Chase bank">
     <link rel="shortcut icon" href="icons/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/icon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32x32.png">
+    <!-- manifest function -->
+    <link rel="manifest" href="/manifest.json">
+
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Five Percent 5%">
 
+    <!--
+      AMP HTML files require a viewport declaration. It's recommended to include initial-scale=1.
+    -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
+
+  <link rel='apple-touch-startup-image' href='/icons/icons-512x512.png' media='(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)'>
   <link rel="apple-touch-startup-image" href="images/launch-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
   <link rel="apple-touch-startup-image" href="images/launch-750x1294.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
   <link rel="apple-touch-startup-image" href="images/launch-1242x2148.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
@@ -24,27 +34,53 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
+<!--     <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase-app.js"></script>
+      <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAclBrdBLhgtiqz7W4Y3k4h58ypE5ZPceg",
+        authDomain: "fivepercent.firebaseapp.com",
+        databaseURL: "https://fivepercent.firebaseio.com",
+        projectId: "fivepercent",
+        storageBucket: "fivepercent.appspot.com",
+        messagingSenderId: "499545058911"
+      };
+      firebase.initializeApp(config);
+    </script> -->
 
-    <title>Rewards</title>
+    
+<!--     <amp-analytics type="gtag" data-credentials="include"> -->
+<!--     <script type="application/json">
+    {
+       "vars" : {
+          "gtag_id": "UA-65109713-3",
+          "config" : {
+            "UA-65109713-3": { "groups": "default" }
+          }
+       }
+    }
+    </script> -->
+<!--     </amp-analytics> -->
+
+  
+    <title>Five Percent Rewards Calendar - Discover Chase</title>
     <!-- The AMP runtime must be loaded as the second child of the `<head>` tag.-->
     <script async src="https://cdn.ampproject.org/v0.js"></script>
 
     <!--
       AMP HTML files require a canonical link pointing to the regular HTML. If no HTML version exists, it should point to itself.
     -->
-    <link rel="canonical" href="https://chenganma.com/ampweb/index.html">
+    <link rel="canonical" href="https://fivepercent.app/">
 
-    <!--
-      AMP HTML files require a viewport declaration. It's recommended to include initial-scale=1.
-    -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
-
+    
     <!--
       The AMP boilerplate.
     -->
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
     <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+
+    <!-- <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script> -->
 
     <style amp-custom>
       /* any custom styles go here. */
@@ -54,23 +90,77 @@
         /*border: 3px outset plum;*/
         padding: 3%;
         margin-top: 20px;
+        margin: auto;
+        width: 320px;
+      }
+
+      .refer {
+          border: 1px solid black;
+          padding: 0px 5px 5px 5px;
+      }
+
+      .home-button {
+          margin-top: 8px;
+      }
+      .headerbar {
+        height: 50px;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+      .site-name {
+        flex: 1;
+        margin-left: -36px;
+      }
+      article {
+        margin-top: 50px;
+      }
+      .hamburger {
+         padding-left: 10px;
+       }
+      .sidebar {
+        padding: 10px;
+        margin: 0;
+      }
+      .sidebar > li {
+        list-style: none;
+        margin-bottom:10px;
+      }
+      .sidebar a {
+        text-decoration: none;
+      }
+      .close-sidebar {
+        font-size: 1.5em;
+        padding-left: 5px;
       }
 
       body {
-        background_color: #000;
         theme_color: #536878;
       }
 
     </style>
 
-    <!-- manifest function -->
-    <link rel="manifest" href="manifest.json">
-    <link rel='apple-touch-startup-image' href='/icons/icons-512x512.png' media='(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)'
-/>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     
 </head>
 
 <body>
+
+<!--     <header class="headerbar">
+      <div role="button" on="tap:sidebar1.open" tabindex="0" class="hamburger">☰</div>
+    </header>
+
+    <amp-sidebar id="sidebar1" layout="nodisplay" side="left">
+      <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>
+          <ul class="sidebar">
+            <li><a href="how.html">How to use this page</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+          </ul>
+    </amp-sidebar> 
+    </center>-->
 
 <!--     <amp-install-serviceworker
       src="serviceworker.js" layout="nodisplay">
@@ -78,94 +168,143 @@
 
     <br><br>
 
-    <center><amp-img src="images/fivepercent.png" width="304" height="61"></amp-img></center>
-    <center><h3>October - December 2018</h3></center>
-
-    <center></center>
+    <center><amp-img src="images/fivepercent.png" width="304" height="61" alt="logo"></amp-img></center>
+    <center><h3>January - March 2019</h3></center>
 
     <div class="boxes">
     <center>
-      <amp-img src="images/chase.jpg" width="500" height="316" layout="responsive" alt="Freedom"></amp-img>
+      <amp-img src="images/chase.jpg" width="350px" height="221px" layout="responsive" alt="Freedom"></amp-img>
     </center>
 
             <center>
-            <h4>5% Department Store</h4>
 
-            <h4>5% Wholesale Clubs</h4>
+            <h4>5% Gas Stations</h4>
 
-            <h4>5% Chase Pay</h4>
-    
+            <h4>5% Tolls</h4>
+
+            <h4>5% Drugstores</h4>
+
+<!--             <div class="refer">
+
+               <h4><a href="https://www.referyourchasecard.com/2/1UMOY4EM7L">Refer Link</a></h4>
+
+               <p>Earn $150 bonus with Chase Freedom. I can be rewarded too if you apply here and are approved for the card.</p>
+
+            </div> -->
+
             </center>
     </div>
 
     <center></center>
     <div class="boxes">
     <center>
-      <amp-img  src="images/discover.jpg" width="500px" height="316px" layout="responsive" alt="Discover"></amp-img>
+      <amp-img  src="images/discover.jpg" width="350px" height="221px" layout="responsive" alt="Discover"></amp-img>
     </center>
 
             <center>
-            <h4>5% Amazon.com</h4>
 
-            <h4>5% Wholesale Clubs</h4>
+                 <h4>5% Grocery Stores</h4>
+
+               <!-- <div class="refer">
+
+                 <h4><a href="http://refer.discover.com/s/cc3qqj">Refer Link</a></h4>
+
+                 <p>You get a $50 statement credit. I can be rewarded too.</p>
+
+               </div> -->
+
             </center>
     </div>
 
     <center></center>
     <div class="boxes">
     <center>
-      <amp-img src="images/amex-prefer.jpg" width="500" height="316" layout="responsive" alt="AMEX Cash Prefer"></amp-img>
+      <amp-img src="images/amex-prefer.jpg" width="350px" height="221px" layout="responsive" alt="AMEX Cash Prefer"></amp-img>
     </center>
     <!-- </section> -->
 
             <center>
-            <h4>6% Supermarkets</h4>
-            <h4>3% Gas Station</h4>
-            <h4>3% Department Store</h4>
-            <h4>1% All Other Purchase</h4>
+
+                 <h4>6% Supermarkets</h4>
+
+                 <h4>3% Gas Station</h4>
+
+                 <h4>3% Department Store</h4>
+
+                 <h4>1% All Other Purchase</h4>
+
             </center>
     </div>
 
     <center></center>
     <div class="boxes">
     <center>
-      <amp-img src="images/aarp.jpg" width="500px" height="316px" layout="responsive" alt="AARP"></amp-img>
+      <amp-img src="images/aarp.jpg" width="350px" height="221px" layout="responsive" alt="AARP"></amp-img>
     </center>
     <!-- </section> -->
 
             <center>
-            <h4>3% Restaurant</h4>
-            <h4>3% Gas Station</h4>
-            <h4>1% All Other Purchase</h4>
+
+                 <h4>3% Restaurant</h4>
+
+                 <h4>3% Gas Station</h4>
+
+                 <h4>1% All Other Purchase</h4>
+
             </center>
     </div>
 
     <center></center>
     <div class="boxes">
     <center>
-      <amp-img src="images/amex-ascend.jpg" width="500px" height="316px" layout="responsive" alt="AARP"></amp-img>
+      <amp-img src="images/amex-ascend.jpg" width="350px" height="221px" layout="responsive" alt="AARP"></amp-img>
     </center>
     <!-- </section> -->
 
             <center>
-            <h4>12x Hilton Portfolio Hotel</h4>
-            <h4>6x Restaurants</h4>
-            <h4>6x Supermarket</h4>
-            <h4>6x Gas Station</h4>
-            <h4>3x All Other Purchase</h4>
+
+                 <h4>12x Hilton Portfolio Hotel</h4>
+
+                 <h4>6x Restaurants</h4>
+
+                 <h4>6x Supermarket</h4>
+
+                 <h4>6x Gas Station</h4>
+
+                 <h4>3x All Other Purchase</h4>
+
+            </center>
+    </div>
+
+    <center></center>
+    <div class="boxes">
+    <center>
+      <amp-img src="images/pathfinder.jpg" width="350px" height="221px" layout="responsive" alt="Pathfinder"></amp-img>
+    </center>
+    <!-- </section> -->
+
+            <center>
+
+                 <h4>3x All Travel Purchase</h4>
+
+                 <h4>1.5x All Other Purchase</h4>
+
             </center>
     </div>
          
 
     <center>
-    <footer class="ampstart-footer flex flex-column items-center p3 center">© 2018 Copyright</footer>
+    <footer class="ampstart-footer flex flex-column items-center p3 center">
+       © 2018-2019 Copyright
+       <div><p>If you have any questions, feel free to reach out to me. <a href="https://goo.gl/forms/pFbgeqKlfw6AFVSI2" target="_blank" rel="noopener">Contact form</a></p></div>
+    </footer>
     </center>
 
 
     <!-- <noscript src="app.js"></noscript>     -->
 
-</body>
-<script>
+
+<!-- <script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
     .register('/serviceworker.js')
@@ -179,5 +318,6 @@ if ('serviceWorker' in navigator) {
       console.log('Service Worker registration failed: ', err);
     });
 }
-</script>
-</html>
+</script> -->
+</body>
+</html amp>

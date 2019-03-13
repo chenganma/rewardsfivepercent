@@ -1,38 +1,34 @@
-self.addEventListener('install', function(event) {
-  console.log('[Service Worker] Installing Service Worker ...', event);
-  event.waitUntil(
-    caches.open('static').then(function(cache) {
-      cache.addAll([
-        '/ampweb',
+var cacheName = 'Rewards';
+var filesToCache = [
+        '/',
         'index.html', 
         'manifest.json',
-        '/ampweb/images/aarp.jpg',
-        '/ampweb/images/amex-prefer.jpg',
-        '/ampweb/images/amex-ascend.jpg',
-        '/ampweb/images/chase.jpg',
-        '/ampweb/images/discover.jpg'
-        ]);
+        '/images/aarp.jpg',
+        '/images/amex-prefer.jpg',
+        '/images/amex-ascend.jpg',
+        '/images/chase.jpg',
+        '/images/discover.jpg',
+        '/images/pathfinder.jpg'
+];
+
+self.addEventListener('install', function(e) {
+  console.log('[serviceworker] Install');
+  e.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      console.log('[serviceworker] Caching app shell');
+      return cache.addAll(filesToCache);
     })
   );
 });
 
-self.addEventListener('activate', function(event) {
-  console.log('[Service Worker] Activating Service Worker ....', event);
+self.addEventListener('activate',  event => {
+  event.waitUntil(self.clients.claim());
 });
 
-self.addEventListener('fetch', function(event) {
-  // event.respondWith(
-  //   caches.match(event.request).then(function(response) {
-  //     if (response) {
-  //       return response;
-  //     } else {
-  //       return fetch(event.request).then(function(res) {
-  //         return caches.open('dynamic').then(function(cache) {
-  //           cache.put(event.request.url, res.clone());
-  //           return res;
-  //         });
-  //       });
-  //     }
-  //   })
-  // );
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request, {ignoreSearch:true}).then(response => {
+      return response || fetch(event.request);
+    })
+  );
 });

@@ -1,6 +1,6 @@
 {
   "short_name": "Rewards",
-  "name": "Rewards",
+  "name": "Rewards APP",
   "icons": [
     {
       "src": "icons/icons-192x192.png",
@@ -13,7 +13,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "index.html?source=pwa",
+  "start_url": "/?source=pwa",
   "background_color": "#fff",
   "display": "standalone",
   "orientation": "portrait",
